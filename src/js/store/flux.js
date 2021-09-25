@@ -13,13 +13,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			ListaPersonajes : []
+			ListaPersonajes: []
 		},
 		actions: {
-
-			addPersonajes: (personaje)=>{
+			addPersonajes: personaje => {
 				const store = getStore();
-				setStore({addPersonajes: [...store.ListaPersonajes, personaje]});
+				setStore({ ListaPersonajes: [...store.ListaPersonajes, personaje] });
 			},
 
 			// Use getActions to call a function within a fuction
@@ -27,9 +26,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				fetch("https://www.swapi.tech/api/people/").then(res=>res.json()).then((response)=>{
-					store.actions.addPersonajes(response.results);
-				}).catch(err=>err);
+				fetch("https://www.swapi.tech/api/people/")
+					.then(res => res.json())
+					.then(response => {
+						store.actions.addPersonajes(response.results);
+						console.log(response.results);
+					})
+					.catch(err => err);
 			},
 			changeColor: (index, color) => {
 				//get the store
