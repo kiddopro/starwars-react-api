@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(response => {
 						// store.actions.addPersonajes(response.results);
-						console.log(response);
+
 						setStore({ listaPersonajes: response.results });
 					})
 					.catch(err => err);
