@@ -9,7 +9,7 @@ const Card = props => {
 				<h5 className="card-title">{props.name}</h5>
 				<p className="card-text">{props.url}</p>
 				<a href="#" className="btn btn-primary">
-					More information
+					Learn More!
 				</a>
 				<i className="fa-light fa-heart rounded" />
 			</div>
