@@ -1,6 +1,6 @@
 import React from 'react';
-
-const LearnMoreCharacter = () => {
+import PropTypes from "prop-types";
+const LearnMoreCharacter = (props) => {
     return (
         <div className="container d-flex">
             <div className="row">
@@ -38,5 +38,8 @@ const LearnMoreCharacter = () => {
     );
 }
 
+LearnMoreCharacter.propTypes = {
+    
+}
 
 export default LearnMoreCharacter;
