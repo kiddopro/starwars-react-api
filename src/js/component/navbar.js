@@ -12,29 +12,32 @@ export const Navbar = () => {
 				{/* </Link> */}
 				{/* <div> */}
 				{/* <Link to="/demo"> */}
-				<div className="dropdown show">
-					<a
+				<div className="dropdown">
+					<button
 						className="btn btn-secondary dropdown-toggle"
-						href="#"
-						role="button"
-						id="dropdownMenuLink"
-						data-toggle="dropdown"
-						aria-haspopup="true"
+						type="button"
+						id="dropdownMenuButton1"
+						data-bs-toggle="dropdown"
 						aria-expanded="false">
-						Dropdown link
-					</a>
-
-					<div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						<a className="dropdown-item" href="#">
-							Action
-						</a>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
-					</div>
+						Dropdown button
+					</button>
+					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li>
+							<a className="dropdown-item" href="#">
+								Action
+							</a>
+						</li>
+						<li>
+							<a className="dropdown-item" href="#">
+								Another action
+							</a>
+						</li>
+						<li>
+							<a className="dropdown-item" href="#">
+								Something else here
+							</a>
+						</li>
+					</ul>
 				</div>
 				{/* </Link> */}
 				{/* </div> */}
