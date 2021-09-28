@@ -6,8 +6,8 @@ const LearnMoreCharacter = (props) => {
             <div className="row">
                 <div className="col-6"><img src="" alt="" /></div>
                 <div className="col-6">
-                    <h1>tiyulo</h1>
-                    <p>parrsfo</p>
+                    <h1>{props.properties.name}</h1>
+                    <p>{props.description}</p>
                 </div>
             </div>
             <hr />
@@ -26,12 +26,12 @@ const LearnMoreCharacter = (props) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{props.name}</td>
-                                <td>{props.birth_year}</td>
-                                <td>{props.gender}</td>
-                                <td>{props.height}</td>
-                                <td>{props.skin_color}</td>
-                                <td>{props.eye_color}</td>
+                                <td>{props.properties.name}</td>
+                                <td>{props.properties.birth_year}</td>
+                                <td>{props.properties.gender}</td>
+                                <td>{props.properties.height}</td>
+                                <td>{props.properties.skin_color}</td>
+                                <td>{props.properties.eye_color}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -48,7 +48,8 @@ LearnMoreCharacter.propTypes = {
     gender: PropTypes.string,
     height: PropTypes.string,
     skin_color: PropTypes.string,
-    eye_color: PropTypes.string
+    eye_color: PropTypes.string,
+    description: PropTypes.string
 }
 
 export default LearnMoreCharacter;
