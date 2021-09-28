@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Favourites from "./favourites";
 
 export const Navbar = () => {
 	return (
@@ -13,9 +14,10 @@ export const Navbar = () => {
 						/>
 					</span>
 				</Link>
+				<Favourites />
 				{/* <div> */}
 				{/* <Link to="/demo"> */}
-				<div className="dropdown">
+				{/* <div className="dropdown">
 					<button
 						className="btn btn-secondary dropdown-toggle"
 						type="button"
@@ -31,7 +33,7 @@ export const Navbar = () => {
 							</a>
 						</li>
 					</ul>
-				</div>
+				</div> */}
 				{/* </Link> */}
 				{/* </div> */}
 			</div>
