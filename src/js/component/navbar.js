@@ -5,11 +5,14 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="container">
-				{/* <Link to="/"> */}
-				<span className="navbar-brand mb-0 h1">
-					<img src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png" style={{ width: "70px" }} />
-				</span>
-				{/* </Link> */}
+				<Link to="/">
+					<span className="navbar-brand mb-0 h1">
+						<img
+							src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png"
+							style={{ width: "70px" }}
+						/>
+					</span>
+				</Link>
 				{/* <div> */}
 				{/* <Link to="/demo"> */}
 				<div className="dropdown">
