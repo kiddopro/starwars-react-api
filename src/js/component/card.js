@@ -11,6 +11,7 @@ const Card = props => {
 				<a href="#" className="btn btn-primary">
 					More information
 				</a>
+				<i className="fa-light fa-heart rounded" />
 			</div>
 		</div>
 	);
