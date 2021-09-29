@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Card = props => {
 	return (
-		<div className="card" style="width: 18rem;">
+		<div className="card" style={{ width: "30%", display: "inline-block", margin: "10px" }}>
 			<img className="card-img-top" src="..." alt="Card image cap" />
 			<div className="card-body">
 				<h5 className="card-title">{props.name}</h5>
