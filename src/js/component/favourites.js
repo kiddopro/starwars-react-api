@@ -3,6 +3,23 @@ import { Context } from "../store/appContext";
 
 const Favourites = () => {
 	const { store, actions } = useContext(Context);
+	const dropdownContent = store.favorites.map((item, index) => {
+		return (
+			<li key={index}>
+				<a className="dropdown-item" href="#">
+					{item}
+				</a>
+				<i className="fas fa-trash float-right" onClick={() => actions.removeFavorites(item)} />
+			</li>
+		);
+	});
+	const dropdownEmpty = (
+		<li>
+			<a className="dropdown-item" href="#">
+				{"empty"}
+			</a>
+		</li>
+	);
 	return (
 		<div className="dropdown">
 			<button
@@ -15,20 +32,9 @@ const Favourites = () => {
 				<span className="border-0 rounded bg-secondary px-1 fw-bold">{store.favorites.length}</span>
 			</button>
 			<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-				{store.favorites.map((item, index) => {
-					return (
-						<li key={index}>
-							<a className="dropdown-item" href="#">
-								{item}
-							</a>
-							<i className="fas fa-trash float-right" onClick={() => actions.removeFavorites(item)} />
-						</li>
-					);
-				})}
+				{store.favorites.length > 0 ? dropdownContent : dropdownEmpty}
 			</ul>
 		</div>
-
-		
 	);
 };
 
