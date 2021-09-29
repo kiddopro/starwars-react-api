@@ -9,10 +9,12 @@ const Card = props => {
 				<h5 className="card-title">{props.name}</h5>
 				<p className="card-text">{props.url}</p>
 				<div className="d-flex justify-content-between">
-					<a href="#" className="btn btn-primary">
+					<button type="button" className="btn btn-outline-primary">
 						Learn More!
-					</a>
-					<i className="fa-light fa-heart rounded" />
+					</button>
+					<button type="button" className="btn btn-outline-warning">
+						<i className="far fa-heart" />
+					</button>
 				</div>
 			</div>
 		</div>

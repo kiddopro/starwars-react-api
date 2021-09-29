@@ -1,5 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	const URL_PERSONAJES = "https://www.swapi.tech/api/people?page=1&limit=100";
+	const URL_PERSONAJES2 = "https://www.swapi.dev/api/";
 	const URL_PLANETAS = "https://www.swapi.tech/api/planets?page=1&limit=100";
 	return {
 		store: {
