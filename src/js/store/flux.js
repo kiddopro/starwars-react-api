@@ -24,7 +24,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setFavorites: favorite => {
 				const store = getStore();
 				if (store.favorites.includes(favorite)) {
-					return;
+					getActions().removeFavorites(favorite);
 				} else {
 					setStore({ favorites: [...store.favorites, favorite] });
 				}
