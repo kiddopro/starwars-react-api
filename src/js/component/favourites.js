@@ -10,7 +10,11 @@ const Favourites = () => {
 					{item}
 				</a>
 				<span className="dropdown-item text-end">
-					<i className="fas fa-trash" onClick={() => actions.removeFavorites(item)} />
+					<i
+						className="fas fa-trash"
+						style={{ cursor: "pointer" }}
+						onClick={() => actions.removeFavorites(item)}
+					/>
 				</span>
 			</li>
 		);
