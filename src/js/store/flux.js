@@ -17,9 +17,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			listaPersonajes: [],
-			listaPlanetas: []
+			listaPlanetas: [],
+			favourites: []
 		},
 		actions: {
+			setFavourites: favourite => {
+				const store = getStore();
+				setStore({ favourites: [...favourites, favourite] });
+			},
 			// addPersonajes: personaje => {
 			// 	const store = getStore();
 			// 	setStore({ listaPersonajes: [...store.listaPersonajes, personaje] });
