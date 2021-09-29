@@ -11,7 +11,7 @@ const Favourites = () => {
 				id="dropdownMenuButton1"
 				data-bs-toggle="dropdown"
 				aria-expanded="false">
-				{"Favorites"}
+				{" Favorites "}
 				<span className="border-0 rounded bg-secondary px-1 fw-bold">{store.favorites.length}</span>
 			</button>
 			<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
