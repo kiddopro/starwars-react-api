@@ -27,6 +27,8 @@ const Favourites = () => {
 				})}
 			</ul>
 		</div>
+
+		
 	);
 };
 
