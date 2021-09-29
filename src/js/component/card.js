@@ -4,6 +4,7 @@ import { Context } from "../store/appContext";
 
 const Card = props => {
 	const { store, actions } = useContext(Context);
+	const isActive = { color: "#000", backgroundColor: "#ffc107", borderColor: "#ffc107" };
 	return (
 		<div className="card" style={{ width: "auto", display: "inline-block", margin: "10px" }}>
 			<img className="card-img-top" src="https://via.placeholder.com/400x200" alt="Card image cap" />
@@ -17,6 +18,7 @@ const Card = props => {
 					<button
 						type="button"
 						className="btn btn-outline-warning"
+						style={actions.isActive(props.name) ? isActive : {}}
 						onClick={() => actions.setFavorites(props.name)}>
 						<i className="far fa-heart" />
 					</button>

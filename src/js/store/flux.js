@@ -21,6 +21,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: []
 		},
 		actions: {
+			isActive: item => {
+				const store = getStore();
+				if (store.favorites.includes(item)) {
+					return true;
+				} else {
+					return false;
+				}
+			},
 			setFavorites: favorite => {
 				const store = getStore();
 				if (store.favorites.includes(favorite)) {
