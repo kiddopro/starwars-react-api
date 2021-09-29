@@ -6,7 +6,6 @@ const CardContainerCharacters = props => {
 	return (
 		<>
 			<h1 className="text-danger">Characters</h1>
-			{console.log(store.listaPersonajes)}
 			<div
 				className="scrolling-wrapper row flex-row flex-nowrap row-cols-1 row-cols-md-3 
 "

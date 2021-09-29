@@ -20,6 +20,10 @@ const Favourites = () => {
 							<a className="dropdown-item" href="#">
 								{item}
 							</a>
+							<i
+								className="fas fa-trash float-right"
+								onClick={e => actions.removeFavourites(e.target.value)}
+							/>
 						</li>
 					);
 				})}

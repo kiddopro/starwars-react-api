@@ -23,8 +23,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			setFavourites: favourite => {
 				const store = getStore();
-
 				setStore({ favourites: [...store.favourites, favourite] });
+			},
+			removeFavourites: favourite => {
+				const store = getStore();
+				let newList = store.favourites.filter(elem => elem != favourite);
+				setStore({ favourites: newList });
 			},
 			// addPersonajes: personaje => {
 			// 	const store = getStore();
