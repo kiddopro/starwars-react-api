@@ -5,11 +5,13 @@ const Favourites = () => {
 	const { store, actions } = useContext(Context);
 	const dropdownContent = store.favorites.map((item, index) => {
 		return (
-			<li key={index}>
+			<li key={index} className="d-flex flex-row justify-content-between align-items-center">
 				<a className="dropdown-item" href="#">
 					{item}
 				</a>
-				<i className="fas fa-trash float-right" onClick={() => actions.removeFavorites(item)} />
+				<span className="dropdown-item text-end">
+					<i className="fas fa-trash" onClick={() => actions.removeFavorites(item)} />
+				</span>
 			</li>
 		);
 	});
