@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../store/appContext";
 
 const Favourites = () => {
-	const [fav, setFav] = useState([]);
-
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="dropdown">
 			<button
@@ -11,14 +11,18 @@ const Favourites = () => {
 				id="dropdownMenuButton1"
 				data-bs-toggle="dropdown"
 				aria-expanded="false">
-				Favourites <span className="border-0 rounded bg-secondary px-1 fw-bold">{fav.length}</span>
+				Favourites <span className="border-0 rounded bg-secondary px-1 fw-bold">{store.favourites.length}</span>
 			</button>
 			<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-				<li>
-					<a className="dropdown-item" href="#">
-						{fav}
-					</a>
-				</li>
+				{store.favourites.map((item, index) => {
+					return (
+						<li key={index}>
+							<a className="dropdown-item" href="#">
+								{item}
+							</a>
+						</li>
+					);
+				})}
 			</ul>
 		</div>
 	);
