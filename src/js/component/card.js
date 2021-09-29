@@ -17,7 +17,7 @@ const Card = props => {
 					<button
 						type="button"
 						className="btn btn-outline-warning"
-						onClick={() => actions.setFavourites(props.name)}>
+						onClick={() => actions.setFavorites(props.name)}>
 						<i className="far fa-heart" />
 					</button>
 				</div>

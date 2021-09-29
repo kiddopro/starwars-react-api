@@ -18,17 +18,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			listaPersonajes: [],
 			listaPlanetas: [],
-			favourites: []
+			favorites: []
 		},
 		actions: {
-			setFavourites: favourite => {
+			setFavorites: favorite => {
 				const store = getStore();
-				setStore({ favourites: [...store.favourites, favourite] });
+				setStore({ favorites: [...store.favorites, favorite] });
 			},
-			removeFavourites: favourite => {
+			removeFavorites: favorite => {
 				const store = getStore();
-				let newList = store.favourites.filter(elem => elem != favourite);
-				setStore({ favourites: newList });
+				let newList = store.favorites.filter(elem => elem != favorite);
+				setStore({ favorites: newList });
 			},
 			// addPersonajes: personaje => {
 			// 	const store = getStore();
