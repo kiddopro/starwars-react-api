@@ -10,20 +10,20 @@ const LearnMoreCharacter = () => {
 		actions.getCharacter(params.id);
 	}, []);
 	return (
-		<div className="container d-flex">
+		<div className="container">
 			<div className="row">
 				<div className="col-6">
 					<img src="https://via.placeholder.com/800x400" alt="" />
 				</div>
-				<div className="col-6">
+				<div className="col-6 text-center">
 					<h1>{store.character.properties && store.character.properties.name}</h1>
 					<p>{store.character.description}</p>
 				</div>
 			</div>
-			<hr />
+			<hr className="text-danger" />
 			<div className="row">
 				<div className="col-12">
-					<table border="1">
+					<table border="0" className="text-danger fw-bold">
 						<thead>
 							<tr>
 								<th>Name</th>
