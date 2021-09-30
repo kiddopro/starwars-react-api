@@ -13,7 +13,7 @@ const Card = props => {
 				<h5 className="card-title">{props.name}</h5>
 				<p className="card-text">{props.url}</p>
 				<div className="d-flex justify-content-between">
-					<Link to={"/character/" + props.uid}>
+					<Link to={props.link + props.uid}>
 						<button type="button" className="btn btn-outline-primary">
 							Learn More!
 						</button>
@@ -34,7 +34,8 @@ const Card = props => {
 Card.propTypes = {
 	name: PropTypes.string,
 	url: PropTypes.string,
-	uid: PropTypes.string
+	uid: PropTypes.string,
+	link: PropTypes.string
 };
 
 export default Card;

@@ -12,10 +12,10 @@ const LearnMoreCharacter = () => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-6">
-					<img src="https://via.placeholder.com/800x400" alt="" />
+				<div className="col-lg-6 col-6">
+					<img src="https://via.placeholder.com/800x400" alt="" style={{ width: "100%" }} />
 				</div>
-				<div className="col-6 text-center">
+				<div className="col-lg-6 col-6 text-center">
 					<h1>{store.character.properties && store.character.properties.name}</h1>
 					<p>{store.character.description}</p>
 				</div>
@@ -23,7 +23,7 @@ const LearnMoreCharacter = () => {
 			<hr className="text-danger" />
 			<div className="row">
 				<div className="col-12">
-					<table border="0" className="text-danger fw-bold">
+					<table border="0" className="text-danger fw-bold text-center mx-auto fs-5">
 						<thead>
 							<tr>
 								<th>Name</th>

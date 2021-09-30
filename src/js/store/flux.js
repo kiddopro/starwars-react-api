@@ -19,7 +19,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			listaPersonajes: [],
 			listaPlanetas: [],
 			favorites: [],
-			character: {}
+			character: {},
+			planet: {}
 		},
 		actions: {
 			getCharacter: id => {
@@ -28,6 +29,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(data => {
 						setStore({ character: data.result });
+					})
+					.catch(err => err);
+			},
+			getPlanet: id => {
+				fetch("https://www.swapi.tech/api/planets/" + id)
+					.then(res => res.json())
+					.then(data => {
+						setStore({ planet: data.result }); //seteamos el valor del state planet con el objeto que se encuentra en la respuesta del json.result
 					})
 					.catch(err => err);
 			},
