@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 const Card = props => {
 	const { store, actions } = useContext(Context);
@@ -12,9 +13,11 @@ const Card = props => {
 				<h5 className="card-title">{props.name}</h5>
 				<p className="card-text">{props.url}</p>
 				<div className="d-flex justify-content-between">
-					<button type="button" className="btn btn-outline-primary">
-						Learn More!
-					</button>
+					<Link to={"/character/" + props.uid}>
+						<button type="button" className="btn btn-outline-primary">
+							Learn More!
+						</button>
+					</Link>
 					<button
 						type="button"
 						className="btn btn-outline-warning"
@@ -30,7 +33,8 @@ const Card = props => {
 
 Card.propTypes = {
 	name: PropTypes.string,
-	url: PropTypes.string
+	url: PropTypes.string,
+	uid: PropTypes.string
 };
 
 export default Card;

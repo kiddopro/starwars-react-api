@@ -11,7 +11,7 @@ const CardContainerCharacters = props => {
 "
 				style={{ overflowX: "scroll", overflowY: "hidden", whiteSpace: "nowrap" }}>
 				{store.listaPersonajes.map((item, index) => {
-					return <Card key={item.uid} name={item.name} url={item.url} />;
+					return <Card key={item.uid} name={item.name} url={item.url} uid={item.uid} />;
 				})}
 			</div>
 		</>
